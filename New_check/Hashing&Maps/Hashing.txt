@@ -1,0 +1,39 @@
+Hashing is very very useful in cases where the operation required to carry out is "SEARCH" / "INSERT" / "COUNT FREQUENCY"
+We can create a Hash for all the ASCII characters
+
+It is useful in cases where the MAX_INPUT is not greater than 10 to the power 7 or 8, in case of integer inputs
+We can declare the Hash array as a global variable for cases where we want to use MAX possible size for array allocation in the memory
+
+    To handle big hash values we use MAP and UNORDERED MAP
+    MAP only stores the element that we require to return OR perform computation on.
+    This optimizes the memory usage and allows for bigger computation values which are much larger than what can be handled using HASH array's
+
+    We can perform the precompute and input operation in one go using 1 for loop
+    for the example program "Freq_Maps.cpp"
+    
+    Declaration for Map & Unordered Map
+    std::map<data_type Key, data_type value> mp;  
+    std::unordered_map<data_type Key, data_type value> mp2;
+
+    Key - The object that we hash / the object with regards to which the computation for the value field takes place
+    Map_Key = can be any data structure as allowed by the program paradigm
+    unordered_map_key = has to be a fundamental data type and cannot be a data structure like pair, vector, etc..
+    value - The after computation data for each key
+
+    Time Complexity For Map fetching and storing is O(log(N))
+    This is same accross all cases i.e., best/ worst/ average 
+    
+    For unordered_map  this is O(1) in cases of best/ average [In some rare cases the worst case for unordered_map is O(N)]
+    Our first option between map and unordered_map should be unordered_map, but if we get a "TIME LIMIT EXCEEDED" error while compilation then only we go for map
+
+
+    Why Does the worst case occur for the unordered_map ? --> Due to iternal collision, this is best explained later in this text via the computational understanding of Hashing
+
+    Refer to the video link [https://www.youtube.com/watch?v=KEs5UyBJ39g] start watching from section (43:00)
+    Hashing can be implemented in these different types:
+    * Division method
+    * Folding method
+    * Mid Square method
+
+
+    

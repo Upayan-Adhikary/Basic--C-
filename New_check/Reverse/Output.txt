@@ -1,0 +1,13 @@
+Enter a string 
+Madam, madam : MadaM.;
+NAKED STRING  madammadammadam
+REVERSED STRING  madammadammadam
+NOT PALINDROME
+
+
+
+"a\0man\0\0a\0plan\0\0a\0canal\0\0panama"      s2
+
+"amanap\0\0lanac\0a\0\0nalp\0a\0\0nam\0a"      s1
+
+This is why it is going to not PALINDROME option in the if-else condition
