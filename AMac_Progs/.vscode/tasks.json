@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build C++",
+      "type": "shell",
+      "command": "/usr/bin/clang++", // Adjust this path if necessary
+      "args": [
+        "-std=c++17",              // Specify the C++ standard
+        "-Wall",                   // Enable all warnings
+        "-Wextra",                 // Enable extra warnings
+        "-g",                      // Include debugging symbols
+        "-o",                      // Specify output file
+        "${fileDirname}/${fileBasenameNoExtension}", // Output file matches source filename
+        "${file}"                  // Input file (current active file)
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true          // Set this task as the default build task
+      },
+      "problemMatcher": ["$gcc"],  // Parse and display compiler errors in the Problems panel
+      "detail": "Builds the active C++ file"
+    },
+    {
+      "label": "Clean Build",
+      "type": "shell",
+      "command": "rm",
+      "args": [
+        "-f",
+        "${fileDirname}/${fileBasenameNoExtension}" // Removes the compiled binary
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false         // Optional cleanup task
+      },
+      "detail": "Cleans the compiled binary of the active C++ file"
+    }
+  ]
+}
